@@ -18,15 +18,15 @@ public class ParrotBuilder {
     }
 
     protected Parrot european(){
-        return new EuropeanParrot(ParrotTypeEnum.EUROPEAN, this.numberOfCoconuts, this.voltage, this.isNailed);
+        return new EuropeanParrot(this.numberOfCoconuts, this.voltage, this.isNailed);
     }
 
     protected Parrot african(){
-        return new AfricanParrot(ParrotTypeEnum.AFRICAN, this.numberOfCoconuts, this.voltage, this.isNailed);
+        return new AfricanParrot(this.numberOfCoconuts, this.voltage, this.isNailed);
     }
 
     protected Parrot norwegianBlue(){
-        return new NorwegianBlueParrot(ParrotTypeEnum.NORWEGIAN_BLUE, this.numberOfCoconuts, this.voltage, this.isNailed);
+        return new NorwegianBlueParrot(this.numberOfCoconuts, this.voltage, this.isNailed);
     }
 
 

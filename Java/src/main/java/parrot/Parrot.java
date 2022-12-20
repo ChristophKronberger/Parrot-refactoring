@@ -3,13 +3,11 @@ package parrot;
 public abstract class Parrot {
     public static final double LOAD_FACTOR = 9.0;
     public static final double BASE_SPEED = 12.0;
-    protected final ParrotTypeEnum type;
     protected final int numberOfCoconuts;
     protected final double voltage;
     protected final boolean isNailed;
 
-    public Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
-        this.type = type;
+    public Parrot(int numberOfCoconuts, double voltage, boolean isNailed) {
         this.numberOfCoconuts = numberOfCoconuts;
         this.voltage = voltage;
         this.isNailed = isNailed;
