@@ -14,6 +14,12 @@ public abstract class Parrot {
         this.isNailed = isNailed;
     }
 
+    protected Parrot(ParrotBuilder parrotBuilder) {
+        this.numberOfCoconuts = parrotBuilder.getNumberOfCoconuts();
+        this.isNailed = parrotBuilder.isNailed();
+        this.voltage = parrotBuilder.getVoltage();
+    }
+
     public abstract double getSpeed();
 
     public double getBaseSpeed(double voltage) {

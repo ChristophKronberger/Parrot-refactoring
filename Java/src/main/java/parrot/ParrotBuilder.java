@@ -16,18 +16,25 @@ public class ParrotBuilder {
     public static ParrotBuilder build (int numberOfCoconuts, double voltage, boolean isNailed){
         return new ParrotBuilder(isNailed, numberOfCoconuts, voltage);
     }
-
     protected Parrot european(){
-        return new EuropeanParrot(this.numberOfCoconuts, this.voltage, this.isNailed);
+        return new EuropeanParrot(this);
     }
 
     protected Parrot african(){
-        return new AfricanParrot(this.numberOfCoconuts, this.voltage, this.isNailed);
+        return new AfricanParrot(this);
     }
-
     protected Parrot norwegianBlue(){
-        return new NorwegianBlueParrot(this.numberOfCoconuts, this.voltage, this.isNailed);
+        return new NorwegianBlueParrot(this);
     }
 
+    public boolean isNailed() {
+        return isNailed;
+    }
+    public int getNumberOfCoconuts() {
+        return numberOfCoconuts;
+    }
 
+    public double getVoltage() {
+        return voltage;
+    }
 }

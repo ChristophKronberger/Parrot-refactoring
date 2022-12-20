@@ -1,8 +1,9 @@
 package parrot;
 
 public class NorwegianBlueParrot extends Parrot{
-    public NorwegianBlueParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
-        super(numberOfCoconuts, voltage, isNailed);
+
+    public NorwegianBlueParrot(ParrotBuilder parrotBuilder) {
+        super(parrotBuilder);
     }
 
     @Override
