@@ -2,9 +2,9 @@ package parrot;
 
 public class ParrotBuilder {
 
-    private boolean isNailed;
-    private int numberOfCoconuts;
-    private double voltage;
+    private final boolean isNailed;
+    private final int numberOfCoconuts;
+    private final double voltage;
 
 
     private ParrotBuilder(boolean isNailed, int numberOfCoconuts, double voltage) {
