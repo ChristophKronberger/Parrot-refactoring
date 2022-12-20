@@ -3,9 +3,12 @@ package parrot;
 public class NorwegianBlueParrot extends Parrot{
 
     public static final double MAX_SPEED = 24.0;
+    private final double voltage;
+    private final boolean isNailed;
 
-    public NorwegianBlueParrot(ParrotBuilder parrotBuilder) {
-        super(parrotBuilder);
+    public NorwegianBlueParrot(boolean isNailed, double voltage) {
+        this.voltage = voltage;
+        this.isNailed = isNailed;
     }
 
     @Override

@@ -2,39 +2,20 @@ package parrot;
 
 public class ParrotBuilder {
 
-    private final boolean isNailed;
-    private final int numberOfCoconuts;
-    private final double voltage;
-
-
-    private ParrotBuilder(boolean isNailed, int numberOfCoconuts, double voltage) {
-        this.isNailed = isNailed;
-        this.numberOfCoconuts = numberOfCoconuts;
-        this.voltage = voltage;
+    private ParrotBuilder() {
     }
 
-    public static ParrotBuilder build (int numberOfCoconuts, double voltage, boolean isNailed){
-        return new ParrotBuilder(isNailed, numberOfCoconuts, voltage);
-    }
-    protected Parrot european(){
-        return new EuropeanParrot(this);
+    protected static Parrot european() {
+        return new EuropeanParrot();
     }
 
-    protected Parrot african(){
-        return new AfricanParrot(this);
-    }
-    protected Parrot norwegianBlue(){
-        return new NorwegianBlueParrot(this);
+    protected static Parrot african(int numberOfCoconuts) {
+        return new AfricanParrot(numberOfCoconuts);
     }
 
-    public boolean isNailed() {
-        return isNailed;
-    }
-    public int getNumberOfCoconuts() {
-        return numberOfCoconuts;
-    }
+    protected static Parrot norwegianBlue(double voltage, boolean isNailed) {
+        return new NorwegianBlueParrot(isNailed, voltage);
 
-    public double getVoltage() {
-        return voltage;
+
     }
 }
